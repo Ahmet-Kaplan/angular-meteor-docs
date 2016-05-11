@@ -13,7 +13,7 @@ And second, we will update the client, and add authentication packages to it. We
 In terminal, type:
 
     $ bower install accounts-phone --save
-    $ bower install angular-meteor --save
+    $ bower install angular-meteor-auth --save
 
 And import them in our `index.js`:
 
@@ -23,13 +23,13 @@ And since `angular-meteor-auth` is an `Angular` extension we will need to add it
 
 {{> DiffBox tutorialName="ionic-tutorial" step="5.4"}}
 
-Inorder to make the SMS verification work we will need to create a file locaed in `api/server/sms.js` with the following contents:
+Inorder to make the SMS verification work we will need to create a file located in `api/server/sms.js` with the following contents:
 
 {{> DiffBox tutorialName="ionic-tutorial" step="5.5"}}
 
-If you would like to test the verification with a real phone number, `accouts-phone` provides an easy access for [twilio's API](https://www.twilio.com/), for more information see [accounts-phone's repo](https://github.com/okland/accounts-phone).
+If you would like to test the verification with a real phone number, `accounts-phone` provides an easy access for [twilio's API](https://www.twilio.com/), for more information see [accounts-phone's repo](https://github.com/okland/accounts-phone).
 
-For debugging purposes if you'd like to add admin phone numbers and mater verification codes which will always pass the verification stage, you may add a `settings.json` file at the root folder with the following fields:
+For debugging purposes if you'd like to add admin phone numbers and master verification codes which will always pass the verification stage, you may add a `settings.json` file at the root folder with the following fields:
 
     {
       "ACCOUNTS_PHONE": {
